@@ -1,20 +1,20 @@
-import Promises
 import UIKit
 
 class SecondViewController: UIViewController {
     @IBOutlet private weak var textField: UITextField!
 
-    private var promise: Promise<String>?
+    private let returnValue: (String) -> Void
 
-    func returnValue() -> Promise<String> {
-        let p = Promise<String>.pending()
-        promise = p
-        return p
+    required init?(coder: NSCoder) { fatalError() }
+
+    init?(coder: NSCoder, returnValue: @escaping (String) -> Void) {
+        self.returnValue = returnValue
+        super.init(coder: coder)
     }
 
     @IBAction func didTapButton(_ sender: Any) {
         if let value = textField.text {
-            promise?.fulfill(value)
+            returnValue(value)
         }
         navigationController?.popViewController(animated: true)
     }

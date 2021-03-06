@@ -1,4 +1,3 @@
-import Promises
 import UIKit
 
 class FirstViewController: UIViewController {
@@ -6,17 +5,11 @@ class FirstViewController: UIViewController {
 
     @IBAction func didTapButton(_ sender: Any) {
         guard let vc = storyboard?.instantiateViewController(identifier: "SecondViewController", creator: { coder in
-            SecondViewController(coder: coder)
+            SecondViewController(coder: coder) { [weak self] in
+                self?.label.text = $0
+            }
         }) else { return }
 
         navigationController?.pushViewController(vc, animated: true)
-
-        Promise(on: DispatchQueue.global()) {
-            // Worker Thread
-            try await(vc.returnValue())
-        }.then { [weak self] returnValue in
-            // UI Thread
-            self?.label.text = returnValue
-        }
     }
 }

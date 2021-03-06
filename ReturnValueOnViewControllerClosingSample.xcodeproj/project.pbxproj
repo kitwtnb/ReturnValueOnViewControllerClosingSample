@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,6 @@
 		A7B5CC2A25F30CB1008DB55D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7B5CC2925F30CB1008DB55D /* Assets.xcassets */; };
 		A7B5CC2D25F30CB1008DB55D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7B5CC2B25F30CB1008DB55D /* LaunchScreen.storyboard */; };
 		A7B5CC3725F30D23008DB55D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5CC3625F30D23008DB55D /* SecondViewController.swift */; };
-		A7B5CC3C25F311E2008DB55D /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = A7B5CC3B25F311E2008DB55D /* Promises */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +33,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7B5CC3C25F311E2008DB55D /* Promises in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +87,6 @@
 			);
 			name = ReturnValueOnViewControllerClosingSample;
 			packageProductDependencies = (
-				A7B5CC3B25F311E2008DB55D /* Promises */,
 			);
 			productName = ReturnValueOnViewControllerClosingSample;
 			productReference = A7B5CC1D25F30CB0008DB55D /* ReturnValueOnViewControllerClosingSample.app */;
@@ -119,7 +116,6 @@
 			);
 			mainGroup = A7B5CC1425F30CB0008DB55D;
 			packageReferences = (
-				A7B5CC3A25F311E2008DB55D /* XCRemoteSwiftPackageReference "promises" */,
 			);
 			productRefGroup = A7B5CC1E25F30CB0008DB55D /* Products */;
 			projectDirPath = "";
@@ -351,25 +347,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		A7B5CC3A25F311E2008DB55D /* XCRemoteSwiftPackageReference "promises" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/google/promises";
-			requirement = {
-				kind = exactVersion;
-				version = 1.2.12;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		A7B5CC3B25F311E2008DB55D /* Promises */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A7B5CC3A25F311E2008DB55D /* XCRemoteSwiftPackageReference "promises" */;
-			productName = Promises;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A7B5CC1525F30CB0008DB55D /* Project object */;
 }
